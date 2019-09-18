@@ -66,15 +66,15 @@ module Administrate
       end
 
       def attached?
-        self.photo.attached? rescue nil
+        field.data.attached?
       end
 
       # def attachments
         # self.
       # end
 
-      # delegate :attached?, to: :data 
-      # delegate :attachments, to: :data# if !data.nil?
+      delegate :attached?, to: :data 
+      delegate :attachments, to: :data# if !data.nil?
     end
   end
 end
