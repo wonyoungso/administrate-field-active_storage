@@ -73,7 +73,7 @@ module Administrate
         # self.
       # end
 
-      delegate :attached?, to: :data 
+      # delegate :attached?, to: :data 
       delegate :attachments, to: :data# if !data.nil?
     end
   end
