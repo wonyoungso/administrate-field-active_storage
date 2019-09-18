@@ -6,15 +6,10 @@
 - To preview video files you need to install `ffmpeg`.
 
 ## How To Use:
-Add `administrate-field-active_storage` to your Gemfile (rails 6):
+Add `administrate-field-active_storage` to your Gemfile:
 
 ```ruby
 gem 'administrate-field-active_storage'
-```
-
-for rails 5.x use the following
-```ruby
-gem 'administrate-field-active_storage' -v 0.1.8
 ```
 
 Install:
@@ -120,7 +115,7 @@ class ModelDashboard < Administrate::BaseDashboard
 end
 ```
 
-### show_preview_size
+## show_preview_size
 Supply the size of the image preview inside the show page check out the mini_magic documentation for resize
 ```ruby
 class ModelDashboard < Administrate::BaseDashboard
@@ -130,8 +125,6 @@ class ModelDashboard < Administrate::BaseDashboard
   }
   # ...
 end
-```
-
 ### direct_upload
 If you want to upload directly from the browser to the cloud you can use direct_upload
 ```ruby
