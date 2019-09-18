@@ -65,8 +65,16 @@ module Administrate
         Rails.application.routes.url_helpers.send(destroy_path_helper, {:record_id => record_id, :attachment_id => attachment_id})
       end
 
-      delegate :attached?, to: :data 
-      delegate :attachments, to: :data# if !data.nil?
+      def attached?
+        self.photo.attached? rescue nil
+      end
+
+      # def attachments
+        # self.
+      # end
+
+      # delegate :attached?, to: :data 
+      # delegate :attachments, to: :data# if !data.nil?
     end
   end
 end
